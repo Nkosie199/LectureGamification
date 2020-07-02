@@ -1,0 +1,97 @@
+* {
+box-sizing: border-box;
+}
+
+
+*:focus {	
+outline: none;
+}
+
+@font-face {
+    font-family: Moon;
+    src: url(../fonts/moonlight.otf)format("opentype");;
+}
+
+body {
+    font-family: Moon;
+    background: url(../images/background.png);
+    background-size: 70%;
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+img {
+    padding-top: 15px;
+    margin-bottom: 15px;
+    width: 128px;
+    height:136px;
+}
+
+.login-form {
+    background: 
+        linear-gradient(135deg, rgba(105, 105, 105, 0.5) 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, rgba(105, 105, 105, 0.5) 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, rgba(105, 105, 105, 0.5) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(105, 105, 105, 0.5) 25%, transparent 25%);   
+    background-size: 100px 100px;
+    background-color: rgba(105, 105, 105, 0.0);
+    margin: auto;
+    margin-top: 102px;
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+select {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 200;
+    padding: 10px 0;
+
+    width: 120px;
+    height: 39px;
+    transition: border .5s;
+}
+
+select:focus {
+    border: 1.5px solid #2980B9;
+    box-shadow: none;
+}
+
+input {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 250px;
+    height: 38px;
+    transition: border .5s;
+
+}
+
+input:focus {
+    border: 1.5px solid #2980B9;
+    box-shadow: none;
+}
+
+.login-button {
+    margin-top: 10px;
+    width: 125px;
+}

@@ -1,0 +1,421 @@
+body {
+    background: url(../images/background.png);
+    background-repeat top left;
+    background-size: 45%;
+    margin: auto;
+    font-family: Moon;
+    width: auto;
+    height: auto;
+}
+
+@font-face {
+    font-family: Moon;
+    src: url(../fonts/moonlight.otf)format("opentype");
+    ;
+}
+
+#logout {
+    background-image: url("../images/logout-icon.png");
+    position: fixed;
+    right: 0px;
+    top: 10px;
+    width: 66px;
+    height: 120px;
+    background-color: rgb(70, 90, 110);
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 80px;
+    border-top-left-radius: 80px;
+    background-size: 90%;
+    z-index: 1000;
+    background-position: 8px;
+}
+
+div #logout:hover {
+    cursor: pointer;
+}
+
+.popup-position {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 18px;
+    z-index: 2000;
+}
+
+#popup-wrapper {
+    width: 500px;
+    margin: 70px auto;
+    text-align: left;
+    border-radius: 18px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+#popup-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+#confirm {
+    width: 78px;
+    height: 78px;
+    position: relative;
+    left: 70px;
+}
+
+#cancel {
+    width: 78px;
+    height: 78px;
+    position: relative;
+    left: 230px;
+}
+
+div div div table tr td img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#wholepage {
+    width: auto;
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#chat-label {
+    position: relative;
+    top: -10px;
+}
+
+.nav-side {
+    position: fixed;
+    left: 0px;
+    top: 8px;
+    height: 116px;
+    width: 270px;
+    max-width: 2500px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-left: -270px;
+    transition: all 0.8s ease;
+    background: -moz-linear-gradient(left, rgb(105, 105, 105, 0.5), rgb(70, 90, 110));
+    background: linear-gradient(left, rgb(105, 105, 105, 0.5), rgb(70, 90, 110));
+    z-index: 1000;
+}
+
+.nav-side.nav-open {
+    margin-left: 0;
+    transition: all 0.8s ease;
+    z-index: 1000;
+}
+
+.nav-toggle {
+    position: absolute;
+    right: -65px;
+    top: 0;
+    width: 66px;
+    height: 100px;
+    background-color: rgb(70, 90, 110);
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 80px;
+    transition: all 0.8s ease;
+    background-image: url(../images/chat-icon.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 2px;
+    z-index: 1000;
+    outline: 0;
+}
+
+#profilebar {
+    background-image: url(../images/cs-background.png);
+    background-size: 100%;
+    width: 660px;
+    height: 175px;
+    margin-bottom: 14px;
+    border-radius: 18px;
+    z-index: -1;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+#profilepic {
+    background-image: url("images/man-icon.png");
+    width: 128px;
+    height: 128px;
+    margin-top: 25px;
+    margin-left: 24px;
+}
+
+#profilepic:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#profilename {
+    font-size: 36px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    position: relative;
+    bottom: 90px;
+    left: 5px;
+    text-shadow: 0 4px 4px rgba(105, 105, 105, 0.4);
+}
+
+#coursecode {
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    right: 280px;
+    bottom: 60px;
+    position: relative;
+    text-shadow: 0 4px 4px rgba(105, 105, 105, 0.7);
+}
+
+#slideshowbar {
+    top: -65px;
+    width: 660px;
+    height: 175px;
+    border-radius: 18px;
+    margin-left: 2px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+#maindiv {
+    top: -63px;
+    width: 655px;
+    height: auto ;
+    background-color: rgb(105, 105, 105, 0.3);
+    border-radius: 18px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    background: -moz-linear-gradient(bottom, rgb(105, 105, 105, 0.3), rgb(70, 90, 110, 0.7));
+    background: linear-gradient(bottom, rgb(105, 105, 105, 0.3), rgb(70, 90, 110, 0.7))
+}
+
+#home {
+    display: none;
+}
+
+#quizzes {
+    display: none;
+}
+
+#question-one{
+display: block;
+}
+#question-two{
+    display: none;
+}
+#question-three{
+    display: none;
+}
+#question-four{
+    display: none;
+}
+#question-five{
+    display: none;
+}
+
+#forums {
+    display: none;
+}
+
+#course-notes {
+    display: block;
+}
+
+#inner{
+   vertical-align: middle;
+   resize: none;
+   margin-top: 20px;
+
+}
+
+#message {
+    resize: none;
+    border-radius: 15px;   
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+}
+
+#reset {
+    border-radius: 15px;
+}
+
+
+#courseinfo {
+    height: 200px;
+}
+
+#leaderboard {
+    display: none;
+}
+
+#footer {
+    width: 660px;
+    height: 100px;
+    top: -68px;
+    margin-top: 7px;
+    background-color: rgb(105, 105, 105, 0.2);
+    border-radius: 18px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    background: -moz-linear-gradient(bottom, rgb(105, 105, 105, 0.3), rgb(70, 90, 110, 0.7));
+    background: linear-gradient(bottom, rgb(105, 105, 105, 0.3), rgb(70, 90, 110, 0.7))
+}
+
+input:hover {
+    opacity: 0.8;
+}
+
+input {
+    background-size: 100%;
+    width: 78px;
+    height: 78px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font: 12px arial;
+}
+
+
+#chatbox {
+    position: relative;
+    top: 10px;
+    bottom: 10px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: rgb(0, 0, 0, 0);
+    height: 660px;
+    width: 600px;
+    overflow: auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#forumchatbox {
+    position: relative;
+    top: 10px;
+    bottom: 10px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: rgb(0, 0, 0, 0);
+    height: 535px;
+    width: 600px;
+    overflow: auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#usermsg {
+    position: relative;
+    top: -11px;
+    left: -12px;
+    width: 205px;
+    height: 94px;
+    resize: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: auto;
+    border-style: none;
+}
+
+#usermsg2forum {
+    position: relative;
+    width: 575px;
+    height: 94px;
+    resize: none;
+    right: 20px;
+    background-color: white;
+    border-radius: 15px;
+    border-style: none;
+    overflow: auto;
+}
+
+#submitmsg {
+    position: relative;
+    top: -111px;
+    left: 162px;
+    background-color: rgb(33, 205, 195);
+    color: white;
+    height: 94px;
+    width: 40px;
+    border-radius: 15px;
+    background-image: url("../images/send-icon.png");
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: -10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+#submitmsg2forum {
+    position: relative;
+    top: -98px;
+    left: 293px;
+    background-color: rgb(33, 205, 195);
+    color: white;
+    height: 94px;
+    width: 40px;
+    border-radius: 15px;
+    background-image: url("../images/send-icon.png");
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: -10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.msgln {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 60px;
+    background-color: rgb(33, 180, 195, 0.6);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+label {
+    color: white;
+}
+
+#leaderboard {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.title {
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+tr th {
+    padding-right: 20px;
+}
+
+#group {
+    padding-left: -20px;
+    padding-right: 50px;
+}

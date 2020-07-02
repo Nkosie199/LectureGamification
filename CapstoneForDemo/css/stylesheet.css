@@ -1,0 +1,584 @@
+body {
+    background: url(../images/background.png);
+    background-repeat top left;
+    background-size: 45%;
+    margin: auto;
+    font-family: Moon;
+}
+
+@font-face {
+    font-family: Moon;
+    src: url(../fonts/moonlight.otf)format("opentype");;
+}
+
+#logout {
+    background-image: url("../images/logout-icon.png");
+    position:fixed;
+    right: 0px;
+    top:10px;
+    width: 66px;
+    height: 120px;
+    background-color: rgb(70,90,110);
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 80px;
+    border-top-left-radius: 80px;
+    background-size: 90%;
+    z-index: 1000;
+    background-position: 8px;
+    
+}
+
+div #logout:hover {
+    cursor: pointer;
+}
+
+.popup-position {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 18px;
+    z-index: 2000;
+}
+#popup-wrapper {
+    width: 500px;
+    margin: 70px auto;
+    text-align: left;
+    border-radius: 18px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+#popup-container {
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+#confirm {
+    width: 78px; 
+    height: 78px; position: relative;
+    left: 70px;
+}
+
+#cancel {
+    width: 78px; 
+    height: 78px; 
+    position: relative; 
+    left: 230px;
+}
+
+div div div table tr td img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#location-confirmation{
+    position:relative;
+    left: 200px;
+    width: 78px;
+    height: 78px;
+
+}
+
+#exit-popup {
+    size: 22px;
+}
+
+#wholepage {
+	position:relative;
+    top: 70px;
+    width: auto;
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+#chat-label{
+    position: relative;
+    top:-10px;
+}
+
+.nav-side {
+    position: fixed;
+    left: 0px;
+    top: 8px;
+    height: 116px;
+    width: 270px;
+    max-width: 2500px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-left: -270px;
+    transition:all 0.8s ease;
+    background: -moz-linear-gradient(left, rgb(105, 105, 105, 0.5), rgb(70,90,110));
+    background: linear-gradient(left, rgb(105, 105, 105, 0.5), rgb(70,90,110));
+    z-index: 1000;
+}
+
+.nav-side.nav-open {
+    margin-left: 0;
+    transition:all 0.8s ease;
+    z-index: 1000;
+
+}
+.nav-toggle {
+    position: absolute;
+    right: -65px;
+    top: 0;
+    width: 66px;
+    height: 100px;
+    background-color: rgb(70,90,110);
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 80px;
+    transition:all 0.8s ease;
+    background-image: url(../images/chat-icon.png); 
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 2px;
+    z-index: 1000;
+    outline: 0;
+}
+
+#profilebar{
+ background-image: url(../images/cs-background.png); 
+ background-size: 100%;
+ width: 545px;
+ height: 175px;
+ margin-top: -130px;
+ margin-bottom: 14px;
+ border-radius: 18px;
+ z-index: -1;
+ box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+#profilepic{
+    background-image: url("images/man-icon.png");
+    width: 128px;
+    height: 128px;
+    margin-top: 25px;
+    margin-left: 24px;
+}
+
+#profilepic:hover{
+    opacity: 0.8;
+    cursor:pointer;
+}
+
+#profilename {
+    font-size: 36px; 
+    color: #FFFFFF; 
+    letter-spacing: 1px;
+    position: relative;
+    bottom:90px;
+    left:0px;
+    text-shadow: 0 4px 4px rgba(105, 105, 105, 0.4);
+}
+
+#coursecode {
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    position: absolute;
+    bottom: 1300px;
+    left: 166px;
+    text-shadow: 0 4px 4px rgba(105, 105, 105, 0.7);
+}
+
+#progress {
+    background-image: url(../images/group-background.png);
+    width: 545px;
+    height: 250px;
+    border-radius: 18px;
+    margin-bottom: 2px
+    z-index: -1;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#rank-box {
+    width: 150px;
+    height: 235px;
+    position: absolute;
+    border-radius: 18px;
+    left: 392px;
+    bottom: 968px; 
+    color: #696969;
+    background: 
+    linear-gradient(135deg, rgba(70,90,110, 0.5) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, rgba(70,90,110, 0.5) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, rgba(70,90,110, 0.5) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(70,90,110, 0.5) 25%, transparent 25%);   
+    background-size: 100px 100px;
+    background-color: rgba(70, 90, 110, 0.4);
+
+}
+
+#rank-label {
+    position: relative;
+    font-size: 35px;
+    color: #FFFFFF;
+    letter-spacing: 4px;
+    top: 17px;
+    left: 25px;
+    text-shadow: 0 8px 8px rgba(105, 105, 105, 0.7);
+}
+
+
+#noob-medal {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    left: 3px;
+    top: 18px;
+}
+
+#noob-label {
+    position: relative;
+    font-size: 22px;
+    color: #FFFFFF;
+    letter-spacing: 8px;
+    top: 17px;
+    left: 30px;
+    text-shadow: 0 8px 8px rgba(105, 105, 105, 0.7);
+}
+
+#group-icon {
+    width:40px;
+    height:40px;
+    position: relative;
+    top: 19px;
+    left: 35px;
+}
+
+#group-name {
+    font-size: 36px;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 150px;
+    left: 90px;
+    text-shadow: 0 8px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+progress {
+    border: 0;
+    height: 20px;
+    border-radius: 12px;
+}
+progress::-webkit-progress-bar {
+    border: 0;
+    height: 20px;
+    border-radius: 12px;
+}
+progress::-webkit-progress-value {
+    border: 0;
+    height: 20px;
+    border-radius: 18px;
+}
+progress::-moz-progress-bar {
+    border: 0;
+    height: 20px;
+    border-radius: 12px;
+}
+
+#progress-xp::-moz-progress-bar{
+    background: rgb(33, 180, 195);
+}
+#progress-ap::-moz-progress-bar{
+    background: #32CD32;
+}
+#progress-sp::-moz-progress-bar{
+    background: #FFFF00;
+}
+
+#progress-xp {
+    position: absolute;
+    top: 230px;
+    left: 105px;
+    width:200px; 
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+    border: none;
+
+}
+#progress-ap {
+    position: absolute;
+    top: 280px;
+    right: 355px;
+    width:200px; 
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+    border: none;
+}
+
+#progress-sp {
+    position: absolute;
+    top: 330px;
+    left: 105px;
+    width:200px; 
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+    border: none;
+}
+
+#slideshowbar {
+    position:relative;
+    top:-65px;
+    width: 655px;
+    height: 175px;
+    border-radius: 18px;
+    margin-left: 2px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+} 
+
+#maindiv {
+    position:relative;
+    top: -63px;
+    width: 655px;
+    height: 700px;
+    background-color: rgb(105,105,105,0.3);
+    border-radius: 18px; 
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    background: -moz-linear-gradient(bottom, rgb(105, 105, 105, 0.3), rgb(70,90,110, 0.7));
+    background: linear-gradient(bottom, rgb(105, 105, 105, 0.3), rgb(70,90,110, 0.7))
+}
+#home{
+    display: none;
+}
+#quizzes{
+    display: block;
+}
+
+#forums{
+    display: none;
+}
+
+#course-notes{
+    display: none;
+}
+
+#leaderboard{
+    display: none;
+}
+
+#footer{
+    position:relative;
+    width: 100px;
+    height: 437px;
+    top: -68px;
+    margin-left: 7px;
+    margin-top:4px;
+    background-color: rgb(105,105,105,0.2);
+    border-radius: 18px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    background: -moz-linear-gradient(bottom, rgb(105, 105, 105, 0.3), rgb(70,90,110, 0.7));
+    background: linear-gradient(bottom, rgb(105, 105, 105, 0.3), rgb(70,90,110, 0.7))
+
+}
+
+input:hover {
+    opacity: 0.8;
+}
+
+input{
+    background-size: 100%; width: 78px; height: 78px;
+    margin-top: 3px;
+    margin-bottom:3px;
+    margin-left: 8px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font:12px arial;
+}
+
+
+#chatbox {
+    position:relative;
+    top: 10px;
+    bottom: 10px;
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px;
+    background-color:rgb(0,0,0,0);
+    height: 660px;
+    width:600px;
+    overflow: auto; 
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#forumchatbox {
+    position:relative;
+    top: 10px;
+    bottom: 10px;
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px;
+    background-color:rgb(0,0,0,0);
+    height: 535px;
+    width:600px;
+    overflow: auto; 
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+}
+
+form {
+    /* background-color: white; */
+    text-align:center;
+    padding:0; 
+    border-radius: 7px;
+}
+
+#usermsg {
+    position:relative;
+    top: -11px;
+    left: -12px;
+    width:205px;
+    height: 94px;
+    resize: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: auto;
+    border-style: none;
+}
+
+#usermsg2forum {
+    position:relative;
+    width:575px;
+    height: 94px;
+    resize: none;
+    right: 20px;
+    background-color: white;
+    border-radius: 15px;
+    border-style: none;
+    overflow: auto;
+}
+
+#submitmsg { 
+    position:relative;
+    top:-111px;
+    left:194px;
+    background-color: rgb(33, 205, 195);
+    color: white;
+    height: 94px;
+    width: 40px; 
+    border-radius: 15px;
+    background-image:url("../images/send-icon.png");
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: -10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+#submitmsg2forum { 
+    position:relative;
+    top: -98px;
+    left:290px;
+    background-color: rgb(33, 205, 195);
+    color: white;
+    height: 94px;
+    width: 40px; 
+    border-radius: 15px;
+    background-image:url("../images/send-icon.png");
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: -10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.msgln{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    margin-bottom:10px;
+    color: white;
+    border-radius: 60px;
+    background-color: rgb(33, 180, 195, 0.6);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+label{
+    color: white; 
+}
+
+#leaderboard {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.title {
+    margin-top: 20px;
+    padding-bottom: 15px;
+    vertical-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+tr th {
+    padding-right: 20px;
+}
+
+#group{
+    padding-left: -20px;
+    padding-right: 50px;
+}
+
+.data-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+}
+
+#all-questions {
+    width: 50px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    text-align: left;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#question-one {
+    display: none;
+}
+
+#question-two {
+    display: none;
+}
+
+#question-three {
+    display: none;
+}
+
+#question-four {
+    display: none;
+}
+
+
+#question-five {
+    display: none;
+}
+
+
+
+
+
